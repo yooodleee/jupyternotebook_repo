@@ -1,0 +1,19 @@
+# OpenAPI 첫인상
+
+openapi: 3.0.3
+# ...
+paths:
+  /reviews: # 경로 또는 URI
+    get:  # HTTP 메서드
+      description: Get a bunch of reviews # 사람이 읽을 수 있는 작업 설명
+      parameters: # 파라미터 목록
+      - name: maxRating # 파라미터 이름
+      descroption: |  # 사람이 읽을 수 있는 파라미터 설명
+        Filter the reviews
+        by the maximum rating
+      in: query # 파라미터 삽입
+      schema:
+        type: string  # 파라미터 스키마 타입(값도 허용)
+    responses: # 응답 목록
+      200:  # HTTP 상태 코드
+        description: A bunch of reviews # 사람이 읽을 수 있는 응답 설명
