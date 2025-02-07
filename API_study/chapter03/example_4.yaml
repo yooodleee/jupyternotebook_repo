@@ -1,0 +1,18 @@
+# YAML 맛보기
+
+SomeNumber: 1
+SomeString: hello over there! # 문자열을 반드시 따옴표로 감쌀 필요가 없다. 물론 따옴표로 감싸도 된다.
+IsSomething: true
+# 주석   YAML은 주석을 사용할 수 있다.
+SomeObject:
+  SomeKey: Some string value
+  SomeNestedObject:
+    key: With a nested key/value pair # 들여 쓰는 칸의 크기에 대한 일관성도 같은 맵이나 시퀀스 안에 있는 범위에서만 지키면 된다.
+AList:
+- a string
+- another string
+SomeOldSchoolJSONObject: { one: 1, two: 2 }
+SomeOldSchoolJSONArray: [ "one", 'two', three]  # YAML은 JSON의 슈퍼세트라서 JSON이 필요한 곳에서는 JSON을 사용할 수 있다.
+MultiLineString: |  # YAML은 멀티라인 문자열을 지원하며 사용 가능한 방식도 여러 가지다. 문단 사이의 공백 행과 문장 끝의 공백 행을 입력한 것 그대로 유지해 준다.
+  hello over there,
+  this is multiline string!
